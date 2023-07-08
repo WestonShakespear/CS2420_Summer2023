@@ -1,67 +1,29 @@
 
-public class Assignment_02_11 {
+public class wshakespear_Assignment_02_11 {
 
 	public static boolean isAPrefix(String prefix, String s) {
 
+		// Check to make sure the given String s
+		// isn't shorter than the prefix
 		if (s.length() < prefix.length())
 		{
 			return false;
 		}
 
+		// Loop through the first x chars as given by the preix length
 		for (int index = 0; index < prefix.length(); index++)
 		{
+			// If they don't match return
 			if (s.charAt(index) != prefix.charAt(index))
 			{
 				return false;
 			}
 		}
 
+		// If we didn't return false then it must be true
 		return true;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 	public static void main(String [] args) {
 		System.out.println("Starting tests");
 		if(isAPrefix("fu", "fuzzier") != true){

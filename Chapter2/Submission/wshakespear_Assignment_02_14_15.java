@@ -1,10 +1,12 @@
 
-public class Assignment_02_14_15 {
+public class wshakespear_Assignment_02_14_15 {
 
 	public static int sum(int [] a) {
 		
+		// This is the total sum
 		int sumValue = 0;
 
+		// Use an enhanced for loop to sum everything
 		for (int value : a)
 		{
 			sumValue += value;
@@ -13,9 +15,11 @@ public class Assignment_02_14_15 {
 		return sumValue;
 	}
 	public static int sum(int [][] a) {
-
+		// This is the total sum
 		int twoSumValue = 0;
 
+		// Use an enhanced for loop to call the
+		// single dimensional array sum method
 		for (int[] values : a)
 		{
 			twoSumValue += sum(values);
@@ -25,13 +29,17 @@ public class Assignment_02_14_15 {
 	}
 
 	public static int average(int [] a) {
-
+		// Return the sum of everything divided by the length
 		return sum(a) / a.length;
 	}
 	public static int average(int [][] a) {
+		// length is the total amount if items
+		// sum will be the final sum
 		int length = 0;
 		int sum = 0;
 
+		// add the amount to length
+		// then add up the sums
 		for (int[] values : a)
 		{
 			length += values.length;

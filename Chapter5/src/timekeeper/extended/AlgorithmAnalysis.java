@@ -110,7 +110,7 @@ public class AlgorithmAnalysis {
 			loopSeconds = (double) loopTime / 1000000000;
 			runningSeconds = (double) runningTime / 1000000000;
 
-			System.out.printf(outputFormat, progress, sizes[z], trials[z].mean, loopSeconds, runningSeconds	);
+			System.out.printf(outputFormat, progress, sizes[z], trials[z].mean / 1000000000, loopSeconds, runningSeconds	);
 		}
 	}
 
@@ -124,7 +124,7 @@ public class AlgorithmAnalysis {
 		double loopSeconds = 0;
 		double runningSeconds = 0;
 
-		String outputFormat = "| Progress: %-10s | Size: %10d | Average: %10ds | All: %8fs | Running: %8fs |%n";
+		String outputFormat = "| Progress: %-10s | Size: %10d | Average: %10fs | All: %8fs | Running: %8fs |%n";
 
 		//Now do the real work
 		for(int z = 0; z < sizes.length; z++) {
@@ -136,7 +136,7 @@ public class AlgorithmAnalysis {
 
 				
 
-				int[] a = f.generateIntArrayFromInt(sizes[sizes.length/2]);
+				int[] a = f.generateIntArrayFromInt(sizes[z]);
 				startTime = System.nanoTime();
 				f.runThisFuctionThatNeedsAnIntArray(a);
 				endTime   = System.nanoTime();
@@ -153,7 +153,7 @@ public class AlgorithmAnalysis {
 			loopSeconds = (double) loopTime / 1000000000;
 			runningSeconds = (double) runningTime / 1000000000;
 
-			System.out.printf(outputFormat, progress, sizes[z], trials[z].mean, loopSeconds, runningSeconds	);
+			System.out.printf(outputFormat, progress, sizes[z], (double)trials[z].mean / 1000000000, loopSeconds, runningSeconds	);
 		}
 	}
 

@@ -5,10 +5,16 @@ public class Assignment {
 		//TODO Add code here that determines whether an integer i exists such that A[i] = i in an array of increasing integers
 		//TODO What is the runtime of your algorithm?
 
+		for (int i = 0; i < a.length; i++)
+		{
+			if (a[i] == i)
+			{
+				return true;
+			}
+		}
 
 
-
-		return Math.random() < 0.5;
+		return false;
 	}
 
 	public static boolean isAPrime(int num) {

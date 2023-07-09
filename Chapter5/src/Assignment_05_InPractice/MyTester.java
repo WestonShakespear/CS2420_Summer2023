@@ -5,6 +5,7 @@ public class MyTester {
     public static void main(String[] args)
     {
 
+        runTestA();
 
             
     }
@@ -12,7 +13,7 @@ public class MyTester {
 
     public static void runTestA()
     {
-        AlgorithmAnalysis test = new AlgorithmAnalysis(2, 50, 100);
+        AlgorithmAnalysis test = new AlgorithmAnalysis(10, 41, 20);
         System.out.printf("TestA: Running tests on:%n%s%n", test.getSizes());
 
         test.timeMethodThatNeedsAnIntArray(new TestA());
@@ -20,7 +21,7 @@ public class MyTester {
         System.out.printf(
 			"Trials CSV: %n%s%n%s%n", 
 			"Trial,input size,mean time,median time", 
-			test.displayOutput(true, false));
+			test.displayOutput(true, true));
     }
 
     public static void runTestB()

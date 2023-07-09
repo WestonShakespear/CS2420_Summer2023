@@ -3,6 +3,21 @@ public class Tester {
 
 
 	public static void main(String[] args) {
+		
+		testA();
+
+		
+
+
+	}
+
+
+
+
+
+
+	public static void testA()
+	{
 		System.out.println("Starting 5.30 Test");
 		try{
 		if(Assignment.doesTheArrayMeetCriteria_5_30(new int[]{-198, -196, -193, -188, -185, -182, -180, -175, -173, -170, -165, -160, -156, -153, -149, -147, -145, -143, -139, -136, -134, -132, -129, -127, -125, -123, -121, -117, -112, -109, -106, -102, -99, -95, -92, -90, -87, -83, -78, -76, -72, -70, -66, -63, -58, -56, -54, -52, -48, -44, -42, -40, -36, -32, -28, -26, -23, -20, -18, -13, -9, -6, -2, 1, 3, 8, 12, 14, 17, 19, 21, 24, 29, 32, 35, 39, 42, 46, 48, 50, 52, 56, 61, 66, 70, 74, 76, 79, 81, 83, 86, 90, 92, 94, 96, 100, 105, 107, 109, 114, 118, 120, 123, 125, 129, 132, 135, 139, 144, 149, 151, 155, 159, 164, 167, 171, 173, 177, 179, 183, 188, 192, 197, 200, 203, 207, 209, 212, 215, 218, 222, 226, 229, 231, 234, 237, 241, 244, 246, 250, 254, 258, 263, 268, 271, 274, 277, 282, 285, 290, 292, 294, 297, 302, 305, 307, 311, 313, 316, 319, 321, 326, 330, 334, 339, 341, 343, 346, 351, 354, 356, 361, 363, 368, 371, 376, 379, 381, 384, 388, 392, 395, 400, 403, 405, 408, 413, 416, 418, 422, 427, 429, 434, 439, 443, 446, 448, 451, 456, 461}) == false){
@@ -130,6 +145,10 @@ public class Tester {
 		System.err.println(e.getMessage());
 		}
 		System.out.println("Finished testing 5.30");
+	}
+
+	public static void testB()
+	{
 		System.out.println("Starting Prime Test");
 		try{
 			if(!Assignment.isAPrime(53)){ throw new Exception("Method returned false on the following prime 53");
@@ -642,7 +661,10 @@ public class Tester {
 			System.err.println(e.getMessage());
 		}
 		System.out.println("Finished testing primes");
+	}
 
+	public static void testC()
+	{
 		System.out.println("Starting majority element test");
 		try{
 			if(Assignment.majorityElement(new int[]{26, 42, 16, 42, 35, 42, 42, 42, 42, 42, 6, 25, 28, 42, 25, 42, 26, 42, 20, 42, 6, 42, 42, 42, 42, 42, 42, 42, 16, 35, 33, 23, 17, 42, 42, 0, 22, 42, 17, 3, 42, 42, 24, 42, 25, 42, 12, 1, 36}) == false){
@@ -710,8 +732,6 @@ public class Tester {
 			System.err.println(e.getMessage());
 		}
 		System.out.println("Finished testing majority element");
-
-
 	}
 
 }

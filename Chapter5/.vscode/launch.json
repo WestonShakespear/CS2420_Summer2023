@@ -9,14 +9,12 @@
             "name": "AlgorithmAnalysisDrB",
             "request": "launch",
             "mainClass": "timekeeper.DrBs.AlgorithmAnalysis",
-            "projectName": "Chapter5_d124a430"
         },
         {
             "type": "java",
             "name": "AlgorithmAnalysisExtended",
             "request": "launch",
             "mainClass": "timekeeper.extended.AlgorithmAnalysis",
-            "projectName": "Chapter5_d124a430",
             "console": "externalTerminal"
         },
         {
@@ -24,7 +22,6 @@
             "name": "InPractice",
             "request": "launch",
             "mainClass": "BigOhTester",
-            "projectName": "Chapter5_d124a430",
             "console": "externalTerminal"
         },
         {
@@ -32,7 +29,13 @@
             "name": "MyTester",
             "request": "launch",
             "mainClass": "MyTester",
-            "projectName": "Chapter5_d124a430",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Tester",
+            "request": "launch",
+            "mainClass": "Tester",
             "console": "externalTerminal"
         },
         {

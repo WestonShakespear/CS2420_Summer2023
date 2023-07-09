@@ -21,6 +21,22 @@
         },
         {
             "type": "java",
+            "name": "InPractice",
+            "request": "launch",
+            "mainClass": "BigOhTester",
+            "projectName": "Chapter5_d124a430",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "MyTester",
+            "request": "launch",
+            "mainClass": "MyTester",
+            "projectName": "Chapter5_d124a430",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

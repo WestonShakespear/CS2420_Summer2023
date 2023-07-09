@@ -30,6 +30,18 @@ public class AlgorithmAnalysis {
 		}
 	}
 
+	public AlgorithmAnalysis(int[] _set, int _numTimesForAverage)
+	{
+		this.numTimesForAverage = _numTimesForAverage;
+		this.sizes = new int[_set.length];
+		this.trials = new Trial[_set.length];
+
+		for (int i = 0; i < _set.length; i++)
+		{
+			this.sizes[i] = _set[i];
+		}
+	}
+
 	public String getSizes()
 	{
 		String ret = "";
@@ -50,6 +62,16 @@ public class AlgorithmAnalysis {
 		System.nanoTime();
 	}
 
+	public void rinse(FunctorArray f)
+	{
+		//It seems the first time doesn't work well with timing....
+		//So time something to get the system warmed up;
+		int[] a = f.generateIntArrayFromInt(sizes[sizes.length/2]);
+		System.nanoTime();
+		f.runThisFuctionThatNeedsAnIntArray(a);
+		System.nanoTime();
+	}
+
 	
 
 
@@ -63,7 +85,7 @@ public class AlgorithmAnalysis {
 		double loopSeconds = 0;
 		double runningSeconds = 0;
 
-		String outputFormat = "| Progress: %-8s | Size: %8d | Average: %8ds | All: %8fs | Running: %8fs |%n";
+		String outputFormat = "| Progress: %-10s | Size: %10d | Average: %10ds | All: %8fs | Running: %8fs |%n";
 
 		//Now do the real work
 		for(int z = 0; z < sizes.length; z++) {
@@ -88,7 +110,50 @@ public class AlgorithmAnalysis {
 			loopSeconds = (double) loopTime / 1000000000;
 			runningSeconds = (double) runningTime / 1000000000;
 
-			System.out.printf(outputFormat, progress, sizes[z], 1000, loopSeconds, runningSeconds	);
+			System.out.printf(outputFormat, progress, sizes[z], trials[z].mean, loopSeconds, runningSeconds	);
+		}
+	}
+
+	public void timeMethodThatNeedsAnIntArray(FunctorArray f) {
+
+		this.rinse(f);
+		long startTime, endTime, totalTime = 0;
+		long loopTime = 0;
+		long runningTime = 0;
+
+		double loopSeconds = 0;
+		double runningSeconds = 0;
+
+		String outputFormat = "| Progress: %-10s | Size: %10d | Average: %10ds | All: %8fs | Running: %8fs |%n";
+
+		//Now do the real work
+		for(int z = 0; z < sizes.length; z++) {
+			trials[z] = new Trial(z, sizes[z], this.numTimesForAverage);
+			loopTime = 0;
+
+			for(int i = 0; i < this.numTimesForAverage; i++) {
+				System.gc();
+
+				
+
+				int[] a = f.generateIntArrayFromInt(sizes[sizes.length/2]);
+				startTime = System.nanoTime();
+				f.runThisFuctionThatNeedsAnIntArray(a);
+				endTime   = System.nanoTime();
+				
+				totalTime = endTime - startTime;
+				loopTime += totalTime;
+				runningTime += totalTime;
+
+				trials[z].addIntoSortedArray(totalTime);
+			}
+			trials[z].compute();
+			String progress = String.format("%d/%d", z, sizes.length);
+
+			loopSeconds = (double) loopTime / 1000000000;
+			runningSeconds = (double) runningTime / 1000000000;
+
+			System.out.printf(outputFormat, progress, sizes[z], trials[z].mean, loopSeconds, runningSeconds	);
 		}
 	}
 

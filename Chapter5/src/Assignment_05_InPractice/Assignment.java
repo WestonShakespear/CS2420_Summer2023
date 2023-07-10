@@ -18,12 +18,16 @@ public class Assignment {
 	}
 
 	public static boolean isAPrime(int num) {
-		//TODO Add code here.  I am assuming you will be dividing all the odd integers up to sqrt(num) and seeing if any leave a 0 remainder
 		
-		
-		
-		
-		return Math.random() < 0.5;
+		for (int i = 2; i <= Math.sqrt(num); i++)
+		{
+			if (num % i == 0)
+			{
+				return false;
+			}
+		}
+	
+		return true;
 	}
 
 	public static boolean majorityElement(int [] a) {

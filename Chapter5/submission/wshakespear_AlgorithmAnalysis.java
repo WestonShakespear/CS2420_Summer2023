@@ -1,26 +1,26 @@
-package timekeeper.extended;
 
 
-public class AlgorithmAnalysis {
+
+public class wshakespear_AlgorithmAnalysis {
 
 	//An integer array that gradually increases in terms of big oh times
 	//sizes.length = 45 currently
 	int [] sizes;
-	Trial[] trials;
+	wshakespear_Trial[] trials;
 	int numTimesForAverage;
 
-	public AlgorithmAnalysis()
+	public wshakespear_AlgorithmAnalysis()
 	{
 		this(2, 45, 10);
 	}
 
-	public AlgorithmAnalysis(int _starting, int _totalLength, int _numTimesForAverage)
+	public wshakespear_AlgorithmAnalysis(int _starting, int _totalLength, int _numTimesForAverage)
 	{
 		this.numTimesForAverage = _numTimesForAverage;
 		this.sizes = new int[_totalLength];
 		this.sizes[0] = _starting;
 
-		this.trials = new Trial[sizes.length];
+		this.trials = new wshakespear_Trial[sizes.length];
 		
 		for (int i = 1; i < _totalLength - 1; i += 2)
 		{
@@ -30,11 +30,11 @@ public class AlgorithmAnalysis {
 		}
 	}
 
-	public AlgorithmAnalysis(int[] _set, int _numTimesForAverage)
+	public wshakespear_AlgorithmAnalysis(int[] _set, int _numTimesForAverage)
 	{
 		this.numTimesForAverage = _numTimesForAverage;
 		this.sizes = new int[_set.length];
-		this.trials = new Trial[_set.length];
+		this.trials = new wshakespear_Trial[_set.length];
 
 		for (int i = 0; i < _set.length; i++)
 		{
@@ -62,7 +62,7 @@ public class AlgorithmAnalysis {
 		System.nanoTime();
 	}
 
-	public void rinse(FunctorArray f)
+	public void rinse(wshakespear_FunctorArray f)
 	{
 		//It seems the first time doesn't work well with timing....
 		//So time something to get the system warmed up;
@@ -89,7 +89,7 @@ public class AlgorithmAnalysis {
 
 		//Now do the real work
 		for(int z = 0; z < sizes.length; z++) {
-			trials[z] = new Trial(z, sizes[z], this.numTimesForAverage);
+			trials[z] = new wshakespear_Trial(z, sizes[z], this.numTimesForAverage);
 			loopTime = 0;
 
 			for(int i = 0; i < this.numTimesForAverage; i++) {
@@ -114,7 +114,7 @@ public class AlgorithmAnalysis {
 		}
 	}
 
-	public void timeMethodThatNeedsAnIntArray(FunctorArray f) {
+	public void timeMethodThatNeedsAnIntArray(wshakespear_FunctorArray f) {
 
 		this.rinse(f);
 		long startTime, endTime, totalTime = 0;
@@ -128,7 +128,7 @@ public class AlgorithmAnalysis {
 
 		//Now do the real work
 		for(int z = 0; z < sizes.length; z++) {
-			trials[z] = new Trial(z, sizes[z], this.numTimesForAverage);
+			trials[z] = new wshakespear_Trial(z, sizes[z], this.numTimesForAverage);
 			loopTime = 0;
 
 			for(int i = 0; i < this.numTimesForAverage; i++) {
@@ -175,7 +175,7 @@ public class AlgorithmAnalysis {
 
 	public static void main(String[] args) {
 
-		AlgorithmAnalysis test = new AlgorithmAnalysis(100, 21, 10);
+		wshakespear_AlgorithmAnalysis test = new wshakespear_AlgorithmAnalysis(100, 21, 10);
 		//AlgorithmAnalysis test = new AlgorithmAnalysis();
 
 		System.out.printf("Running tests on:%n%s%n", test.getSizes());

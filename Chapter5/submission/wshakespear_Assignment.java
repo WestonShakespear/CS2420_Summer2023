@@ -1,5 +1,6 @@
 import java.util.*;
-public class Assignment {
+
+public class wshakespear_Assignment {
 
 	public static boolean doesTheArrayMeetCriteria_5_30(int [] a) {
 		// Loop through the array and check each element one time

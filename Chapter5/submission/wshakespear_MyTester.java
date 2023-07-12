@@ -1,6 +1,7 @@
-import timekeeper.extended.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
-public class MyTester {
+public class wshakespear_MyTester {
     
     public static void main(String[] args)
     {
@@ -13,7 +14,7 @@ public class MyTester {
 
     public static void runTestA()
     {
-        AlgorithmAnalysis test = new AlgorithmAnalysis(10, 41, 20);
+        wshakespear_AlgorithmAnalysis test = new wshakespear_AlgorithmAnalysis(10, 41, 20);
         System.out.printf("TestA: Running tests on:%n%s%n", test.getSizes());
 
         test.timeMethodThatNeedsAnIntArray(new TestA());
@@ -34,7 +35,7 @@ public class MyTester {
             681242959, 764474197, 912945239, 937648541, 1005534659, 1066464323 };
     
     
-            AlgorithmAnalysis test = new AlgorithmAnalysis(testBnumbers, 20);
+            wshakespear_AlgorithmAnalysis test = new wshakespear_AlgorithmAnalysis(testBnumbers, 20);
             System.out.printf("TestB: Running tests on:%n%s%n", test.getSizes());
     
             test.timeMethodThatNeedsAnInt(new TestB());
@@ -47,7 +48,7 @@ public class MyTester {
 
     public static void runTestC()
     {
-        AlgorithmAnalysis test = new AlgorithmAnalysis(10, 41, 20);
+        wshakespear_AlgorithmAnalysis test = new wshakespear_AlgorithmAnalysis(10, 41, 20);
         System.out.printf("TestC: Running tests on:%n%s%n", test.getSizes());
 
         test.timeMethodThatNeedsAnInt(new TestC());
@@ -57,18 +58,58 @@ public class MyTester {
 			"Trial,input size,mean time,median time", 
 			test.displayOutput(true, true));
     }
+
+
+
+
+
+    // From DrBs BigOhTester.java moved here for easier use
+    public static int [] generateMajorityElement(int size) {
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		for(int i = 0; i < size; i++) {
+			a.add((int)(Math.random()*size));
+		}
+		Collections.sort(a);
+
+		int spot = (int)(Math.random()*size);
+		int numToDo = (int)(size/2.0); //Already 1 in the array
+		int i = spot+1;
+		while(i < a.size() && a.get(i) == a.get(spot)) {
+			numToDo--;
+			i++;
+		}
+		i = spot-1;
+		while(i >= 0 && a.get(i) == a.get(spot)) {
+			numToDo--;
+			i--;
+		}
+		i = 0;
+		while(i < numToDo) {
+			int r = (int)(Math.random()*size);
+			if(a.get(r) != a.get(spot)) {
+				i++;
+				a.set(r, a.get(spot));
+			}
+		}
+		Collections.shuffle(a);
+		int [] b = new int[size];
+		for(i = 0; i < b.length; i++) {
+			b[i] = a.get(i);
+		}
+		return b;
+	}
 }
 
 
 
 
 
-class TestA implements FunctorArray
+class TestA implements wshakespear_FunctorArray
 {
     @Override
     public void runThisFuctionThatNeedsAnIntArray(int[] a)
     {
-        Assignment.doesTheArrayMeetCriteria_5_30(a);
+        wshakespear_Assignment.doesTheArrayMeetCriteria_5_30(a);
     }
 
     @Override
@@ -83,7 +124,7 @@ class TestB implements Functor
     @Override
     public void runThisFuctionThatNeedsAnInt(int a)
     {
-        Assignment.isAPrime(a);
+        wshakespear_Assignment.isAPrime(a);
     }
 }
 
@@ -94,6 +135,6 @@ class TestC implements Functor
     public void runThisFuctionThatNeedsAnInt(int a)
     {
         int[] testArray = BigOhTester.generateMajorityElement(a);
-        Assignment.majorityElement(testArray);
+        wshakespear_Assignment.majorityElement(testArray);
     }
 }

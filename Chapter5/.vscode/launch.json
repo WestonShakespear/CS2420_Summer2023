@@ -19,6 +19,13 @@
         },
         {
             "type": "java",
+            "name": "Chapter5Problem44Strings",
+            "request": "launch",
+            "mainClass": "Chapter5Problem44Strings",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
             "name": "InPractice",
             "request": "launch",
             "mainClass": "BigOhTester",

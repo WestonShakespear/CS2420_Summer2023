@@ -19,6 +19,20 @@
         },
         {
             "type": "java",
+            "name": "Lecture",
+            "request": "launch",
+            "mainClass": "Lecture",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Assignment_5_41",
+            "request": "launch",
+            "mainClass": "Assignment_5_41",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
             "name": "Chapter5Problem44Strings",
             "request": "launch",
             "mainClass": "Chapter5Problem44Strings",

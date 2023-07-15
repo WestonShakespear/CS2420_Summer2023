@@ -16,14 +16,13 @@
             "name": "Assignment_03_18_ComboLock_Tester",
             "request": "launch",
             "mainClass": "Assignment_03_18_ComboLock_Tester",
-            "projectName": "Assignment_03_18_166ae384"
+            "console": "externalTerminal"
         },
         {
             "type": "java",
             "name": "Assignment_03_18_ComboLock_UserInput",
             "request": "launch",
-            "mainClass": "Assignment_03_18_ComboLock_UserInput",
-            "projectName": "Assignment_03_18_166ae384"
+            "mainClass": "Assignment_03_18_ComboLock_UserInput"
         }
     ]
 }

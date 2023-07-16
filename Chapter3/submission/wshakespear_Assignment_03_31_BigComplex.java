@@ -1,7 +1,6 @@
 import java.math.BigDecimal;
-import java.util.Random;
 
-public class Assignment_03_31_BigComplex {
+public class wshakespear_Assignment_03_31_BigComplex {
 
 	public BigDecimal real;
 	public BigDecimal imaginary;
@@ -10,7 +9,7 @@ public class Assignment_03_31_BigComplex {
 	 * This class provides operations for complex numbers, initially set at 0+0i
 	 * @author Weston Shakespear
 	 */
-	public Assignment_03_31_BigComplex() {
+	public wshakespear_Assignment_03_31_BigComplex() {
 		this.real = new BigDecimal(0);
 		this.imaginary = new BigDecimal(0);
 	}
@@ -20,7 +19,7 @@ public class Assignment_03_31_BigComplex {
 	 * @author Weston Shakespear
 	 * @param _real The real portion of the number
 	 */
-	public Assignment_03_31_BigComplex(BigDecimal _real) {
+	public wshakespear_Assignment_03_31_BigComplex(BigDecimal _real) {
 		this.real = _real;
 		this.imaginary = new BigDecimal(0);
 	}
@@ -31,7 +30,7 @@ public class Assignment_03_31_BigComplex {
 	 * @param _real The real portion of the number
 	 * @param _imaginary The complex portion of the number
 	 */
-	public Assignment_03_31_BigComplex(BigDecimal _real, BigDecimal _imaginary) {
+	public wshakespear_Assignment_03_31_BigComplex(BigDecimal _real, BigDecimal _imaginary) {
 		this.real = _real;
 		this.imaginary = _imaginary;
 	}
@@ -41,7 +40,7 @@ public class Assignment_03_31_BigComplex {
 	 * @author Weston Shakespear
 	 * @param s The complex number in the form of "13 + 7i"
 	 */
-	public Assignment_03_31_BigComplex(String s) {
+	public wshakespear_Assignment_03_31_BigComplex(String s) {
 		// Split the real and complex string parts out
 		String[] parts = s.split(" \\+ ");
 
@@ -66,14 +65,14 @@ public class Assignment_03_31_BigComplex {
 	 * @param b The second complex number
 	 * @return BigComplex The result
 	 */
-	public static Assignment_03_31_BigComplex add(Assignment_03_31_BigComplex a, Assignment_03_31_BigComplex b) {
+	public static wshakespear_Assignment_03_31_BigComplex add(wshakespear_Assignment_03_31_BigComplex a, wshakespear_Assignment_03_31_BigComplex b) {
 		BigDecimal real = a.real;
 		real = real.add(b.real);
 
 		BigDecimal imag = a.imaginary;
 		imag = imag.add(b.imaginary);
 
-		return new Assignment_03_31_BigComplex(real, imag);
+		return new wshakespear_Assignment_03_31_BigComplex(real, imag);
 	}
 	
 	/**
@@ -83,14 +82,14 @@ public class Assignment_03_31_BigComplex {
 	 * @param b The second complex number
 	 * @return BigComplex The result
 	 */
-	public static Assignment_03_31_BigComplex subtract(Assignment_03_31_BigComplex a, Assignment_03_31_BigComplex b) {
+	public static wshakespear_Assignment_03_31_BigComplex subtract(wshakespear_Assignment_03_31_BigComplex a, wshakespear_Assignment_03_31_BigComplex b) {
 		BigDecimal real = a.real;
 		real = real.subtract(b.real);
 
 		BigDecimal imag = a.imaginary;
 		imag = imag.subtract(b.imaginary);
 
-		return new Assignment_03_31_BigComplex(real, imag);
+		return new wshakespear_Assignment_03_31_BigComplex(real, imag);
 	}
 
 	/**
@@ -99,7 +98,7 @@ public class Assignment_03_31_BigComplex {
 	 * @param a An instance of the BigComplex class
 	 * @return boolean Whether or not the value is equal to this
 	 */
-	public boolean equals(Assignment_03_31_BigComplex a) {
+	public boolean equals(wshakespear_Assignment_03_31_BigComplex a) {
 		return (this.real.equals(a.real)) && (this.imaginary.equals(a.imaginary));
 	}
 
@@ -111,11 +110,11 @@ public class Assignment_03_31_BigComplex {
 	 */
 	@Override
 	public boolean equals(Object a) {
-		if (!(a instanceof Assignment_03_31_BigComplex))
+		if (!(a instanceof wshakespear_Assignment_03_31_BigComplex))
 		{
 			return false;
 		}
-		return equals((Assignment_03_31_BigComplex) a);
+		return equals((wshakespear_Assignment_03_31_BigComplex) a);
 	}
 	
 	/**

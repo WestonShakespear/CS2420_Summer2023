@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Assignment_17_Tester",
+            "request": "launch",
+            "mainClass": "Assignment_17_Tester",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Assignment_17_MyTester",
+            "request": "launch",
+            "mainClass": "Assignment_17_MyTester",
+            "console": "externalTerminal"
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 
-public abstract class Shape {
+public abstract class wshakespear_Shape {
 	public abstract double area( );
 	public abstract double perimeter( );
 
@@ -18,7 +18,7 @@ public abstract class Shape {
 	}
 
 	// Calculate the distance between two shapes
-	public static double distance(Shape s1, Shape s2) {
+	public static double distance(wshakespear_Shape s1, wshakespear_Shape s2) {
 		double x1 = s1.originX;
 		double y1 = s1.originY;
 		double x2 = s2.originX;

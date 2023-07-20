@@ -1,8 +1,8 @@
-public class Circle extends Shape implements Comparable<Circle> {
+public class wshakespear_Circle extends wshakespear_Shape implements Comparable<wshakespear_Circle> {
 	
 	private double radius;
 
-	public Circle( double rad ) throws IllegalArgumentException {
+	public wshakespear_Circle( double rad ) throws IllegalArgumentException {
 		if (rad < 0)
 			throw new IllegalArgumentException();
 
@@ -22,7 +22,7 @@ public class Circle extends Shape implements Comparable<Circle> {
 	}
 
 	@Override
-	public int compareTo(Circle o) {
+	public int compareTo(wshakespear_Circle o) {
 		// Return the difference between the input and this circle
 		return (int)(this.radius - o.radius);
 	}

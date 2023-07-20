@@ -1,9 +1,9 @@
-public class Rectangle extends Shape {
+public class wshakespear_Rectangle extends wshakespear_Shape {
 	
     private double length;
     private double width;
 
-    public Rectangle( double len, double wid ) throws IllegalArgumentException {
+    public wshakespear_Rectangle( double len, double wid ) throws IllegalArgumentException {
 		if (len < 0 || wid < 0)
 			throw new IllegalArgumentException();
             

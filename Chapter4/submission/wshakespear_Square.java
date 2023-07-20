@@ -1,8 +1,8 @@
-public class Square extends Shape implements Comparable<Square>{
+public class wshakespear_Square extends wshakespear_Shape implements Comparable<wshakespear_Square>{
 
 	private double sideLength;
 
-	public Square( double _sideLength ) throws IllegalArgumentException {
+	public wshakespear_Square( double _sideLength ) throws IllegalArgumentException {
 		if (_sideLength < 0)
 			throw new IllegalArgumentException();
 
@@ -10,7 +10,7 @@ public class Square extends Shape implements Comparable<Square>{
 	}
 
 	@Override
-	public int compareTo(Square o) {
+	public int compareTo(wshakespear_Square o) {
 		return (int)(this.sideLength - o.sideLength);
 	}
 

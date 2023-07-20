@@ -1,10 +1,10 @@
-public class LinkedList<AnyType> {
+public class wshakespear_LinkedList<AnyType> {
 
-    public Node<AnyType> list;
+    public wshakespear_Node<AnyType> list;
 
-	public LinkedList()
+	public wshakespear_LinkedList()
     {
-        list = new Node<AnyType>();
+        list = new wshakespear_Node<AnyType>();
 	}
 
     /**
@@ -32,7 +32,7 @@ public class LinkedList<AnyType> {
     {   
         this.list.setNextNode
         (
-            new Node<AnyType>(_x, list.getNextNode())
+            new wshakespear_Node<AnyType>(_x, list.getNextNode())
         );
     }
 
@@ -41,10 +41,10 @@ public class LinkedList<AnyType> {
      * @param x the item to search for.
      * @return a Node; node is not valid if item is not found.
      */
-    public Node<AnyType> find(AnyType _x)
+    public wshakespear_Node<AnyType> find(AnyType _x)
     {
-    	Node<AnyType> found = null;
-        Node<AnyType> current = this.list.getNextNode();
+    	wshakespear_Node<AnyType> found = null;
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
 
         while (current != null)
         {
@@ -65,8 +65,8 @@ public class LinkedList<AnyType> {
      */
     public void remove(AnyType _x)
     {
-        Node<AnyType> previous = this.list;
-        Node<AnyType> current = this.list.getNextNode();
+        wshakespear_Node<AnyType> previous = this.list;
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
 
         while (current != null)
         {
@@ -87,7 +87,7 @@ public class LinkedList<AnyType> {
     public String toString()
     {
         String value = "";
-		Node<AnyType> current = this.list.getNextNode();
+		wshakespear_Node<AnyType> current = this.list.getNextNode();
 
 		while (current != null)
         {
@@ -107,9 +107,9 @@ public class LinkedList<AnyType> {
      * Return the size of the list
      * @return
      */
-    public static <AnyType> int listSize(LinkedList<AnyType> _theList)
+    public static <AnyType> int listSize(wshakespear_LinkedList<AnyType> _theList)
     {
-    	Node<AnyType> current = _theList.list.getNextNode();
+    	wshakespear_Node<AnyType> current = _theList.list.getNextNode();
         int length = 0;
 
 		while (current != null)
@@ -128,9 +128,9 @@ public class LinkedList<AnyType> {
     public void insertEnd(AnyType _x)
     {
         // Use previous to keep the last node
-        Node<AnyType> previous = this.list;
+        wshakespear_Node<AnyType> previous = this.list;
         // This is the start of the chain
-        Node<AnyType> current = this.list.getNextNode();
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
         
         // Iterate though the nodes
         while (current != null)
@@ -140,7 +140,7 @@ public class LinkedList<AnyType> {
         }
 
         // Attach the new node to the last node's pointer
-        Node<AnyType> last = new Node<AnyType>(_x);
+        wshakespear_Node<AnyType> last = new wshakespear_Node<AnyType>(_x);
         previous.setNextNode(last);
     }
 
@@ -150,13 +150,13 @@ public class LinkedList<AnyType> {
      */	
 	public void removeLast(AnyType _x)
     {
-        Node<AnyType> matchBefore = null;
-        Node<AnyType> matchAfter = null;
+        wshakespear_Node<AnyType> matchBefore = null;
+        wshakespear_Node<AnyType> matchAfter = null;
 
         // Use previous to keep the last node
-        Node<AnyType> previous = this.list;
+        wshakespear_Node<AnyType> previous = this.list;
         // This is the start of the chain
-        Node<AnyType> current = this.list.getNextNode();
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
 
         // Iterate though the all the nodes
         while (current != null)
@@ -186,9 +186,9 @@ public class LinkedList<AnyType> {
 	public void removeAll(AnyType _x)
     {
         // Use previous to keep the last node
-		Node<AnyType> previous = this.list;
+		wshakespear_Node<AnyType> previous = this.list;
         // This is the start of the chain
-        Node<AnyType> current = this.list.getNextNode();
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
 
         // Iterate though the all the nodes
         while (current != null)
@@ -210,12 +210,12 @@ public class LinkedList<AnyType> {
      * first item in the list.
      * 
      */
-	public Node<AnyType> previous(AnyType _x)
+	public wshakespear_Node<AnyType> previous(AnyType _x)
     {
         // Use previous to keep the last node
-		Node<AnyType> previous = null;
+		wshakespear_Node<AnyType> previous = null;
         // This is the start of the chain
-        Node<AnyType> current = this.list.getNextNode();
+        wshakespear_Node<AnyType> current = this.list.getNextNode();
 
         // Iterate though the nodes until one matches the value
         while (current != null)
@@ -244,10 +244,10 @@ public class LinkedList<AnyType> {
      * As a by product, the found node is moved to the front of the list
      * according to the move to front heuristic of 17.17
      */
-	public Node<AnyType> findAndMoveToFront(AnyType _x)
+	public wshakespear_Node<AnyType> findAndMoveToFront(AnyType _x)
     {
         // First use the find method to get the node with the value
-        Node<AnyType> found = this.find(_x);
+        wshakespear_Node<AnyType> found = this.find(_x);
         // If we found a match use the remove method, then the insertFront method
 		if (found != null)
         {

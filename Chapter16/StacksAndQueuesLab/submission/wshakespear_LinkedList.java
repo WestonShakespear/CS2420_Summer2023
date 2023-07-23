@@ -1,10 +1,10 @@
 
-public class LinkedList<AnyType> {
+public class wshakespear_LinkedList<AnyType> {
 
     public Node<AnyType> list;
     public String delimeter = " ";
 
-	public LinkedList()
+	public wshakespear_LinkedList()
     {
         list = new Node<AnyType>();
 	}
@@ -195,7 +195,7 @@ public class LinkedList<AnyType> {
      * Return the size of the list
      * @return
      */
-    public static <AnyType> int listSize(LinkedList<AnyType> _theList)
+    public static <AnyType> int listSize(wshakespear_LinkedList<AnyType> _theList)
     {
     	Node<AnyType> current = _theList.list.getNextNode();
         int length = 0;

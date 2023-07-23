@@ -1,11 +1,11 @@
-// Most of the logic was added to LinkedList.java
-public class Queue<AnyType> {
+// Most of the logic was added to LinkedList.java...Node.java was unchanged
+public class wshakespear_Queue<AnyType> {
 
-	LinkedList<AnyType> queue;
+	wshakespear_LinkedList<AnyType> queue;
 
-	public Queue()
+	public wshakespear_Queue()
 	{
-		this.queue = new LinkedList<>();
+		this.queue = new wshakespear_LinkedList<>();
 		this.queue.delimeter = "->";
 	}
 
@@ -50,7 +50,7 @@ public class Queue<AnyType> {
 
 	public static void main(String[] args)
 	{
-		Queue<Integer> st = new Queue<>();
+		wshakespear_Queue<Integer> st = new wshakespear_Queue<>();
 
 		st.enqueue(4);	System.out.println(st.toString());
 		st.enqueue(3);	System.out.println(st.toString());

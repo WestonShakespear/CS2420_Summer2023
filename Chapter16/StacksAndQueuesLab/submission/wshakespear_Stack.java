@@ -1,12 +1,11 @@
-
-// Most of the logic was added to LinkedList.java
-public class Stack<AnyType>
+// Most of the logic was added to LinkedList.java...Node.java was unchanged
+public class wshakespear_Stack<AnyType>
 {
-	private LinkedList<AnyType> stack;
+	private wshakespear_LinkedList<AnyType> stack;
 
-	public Stack()
+	public wshakespear_Stack()
 	{
-		this.stack = new LinkedList<>();
+		this.stack = new wshakespear_LinkedList<>();
 		this.stack.delimeter = "%n-%n";
 	}
 
@@ -51,7 +50,7 @@ public class Stack<AnyType>
 
 	public static void main(String[] args)
 	{
-		Stack<Integer> st = new Stack<>();
+		wshakespear_Stack<Integer> st = new wshakespear_Stack<>();
 
 		st.push(4);	System.out.println(st.toString());
 		st.push(3);	System.out.println(st.toString());

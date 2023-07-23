@@ -1,5 +1,5 @@
-public class GenericMemoryCell<AnyType extends Comparable<? super AnyType>> 
-implements Comparable<GenericMemoryCell<AnyType>>
+public class wshakespear_GenericMemoryCell<AnyType extends Comparable<? super AnyType>> 
+implements Comparable<wshakespear_GenericMemoryCell<AnyType>>
 {
 
 	private AnyType storedValue;
@@ -9,7 +9,7 @@ implements Comparable<GenericMemoryCell<AnyType>>
 
 
 	@Override
-	public int compareTo(GenericMemoryCell<AnyType> o)
+	public int compareTo(wshakespear_GenericMemoryCell<AnyType> o)
 	{
 		return this.storedValue.compareTo(o.storedValue);
 	}

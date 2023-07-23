@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class Assignment_04_Generic_Tester {
+public class wshakespear_Assignment_04_Generic_Tester {
 
 	public static <GenericType extends Comparable<? super GenericType>>
 	GenericType min(GenericType a, GenericType b) {
@@ -65,11 +65,7 @@ public class Assignment_04_Generic_Tester {
 	public static void testTwo()
 	{
 		Integer [] secondTester = new Integer[25];
-		String [] s = {"amet", "audiam", "convenire", "duis", "ea", "id", "in", "insolens", "ipsumd", "lorem", "mei", "mnesarchum", "olor", "populo", "primis", "putent", "quo", "quo", "scripta", "sit", "tollit", "ut", "vim", "vivendum"};
-
 		
-		
-
 		System.out.println("Starting tests for 4.29 (Comparable<MemoryCell>)");
 		
 		secondTester = new Integer[25];
@@ -82,9 +78,9 @@ public class Assignment_04_Generic_Tester {
 			for(int i = 0; i < 20; i++) {
 				int x = (int)(Math.random()*(secondTester.length/2));
 				int next = (int)(Math.random()*(secondTester.length-x-2))+x+1;
-				GenericMemoryCell<Integer> smaller = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> smaller = new wshakespear_GenericMemoryCell<Integer>();
 				smaller.write(x);
-				GenericMemoryCell<Integer> larger = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> larger = new wshakespear_GenericMemoryCell<Integer>();
 				larger.write(next);
 				
 				int answer = smaller.compareTo(larger); 
@@ -102,9 +98,9 @@ public class Assignment_04_Generic_Tester {
 			for(int i = 0; i < 20; i++) {
 				int x = (int)(Math.random()*(secondTester.length/2));
 				int next = (int)(Math.random()*(secondTester.length-x-2))+x+1;
-				GenericMemoryCell<Integer> smaller = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> smaller = new wshakespear_GenericMemoryCell<Integer>();
 				smaller.write(x);
-				GenericMemoryCell<Integer> larger = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> larger = new wshakespear_GenericMemoryCell<Integer>();
 				larger.write(next);
 				
 				int answer = larger.compareTo(smaller);
@@ -120,9 +116,9 @@ public class Assignment_04_Generic_Tester {
 		try {
 			for(int i = 0; i < 20; i++) {
 				int x = (int)(Math.random()*(secondTester.length/2));
-				GenericMemoryCell<Integer> smaller = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> smaller = new wshakespear_GenericMemoryCell<Integer>();
 				smaller.write(x);
-				GenericMemoryCell<Integer> smaller2 = new GenericMemoryCell<Integer>();
+				wshakespear_GenericMemoryCell<Integer> smaller2 = new wshakespear_GenericMemoryCell<Integer>();
 				smaller2.write(x);
 				
 				int answer = smaller.compareTo(smaller2);
@@ -155,22 +151,22 @@ public class Assignment_04_Generic_Tester {
 					a.add(s[j]);
 				}
 				//Collections.shuffle(a);
-				Person [] smaller = new Person[a.size()];
+				wshakespear_Person [] smaller = new wshakespear_Person[a.size()];
 				for(int j = 0; j < a.size(); j++) {
-					smaller[j] = new Person(a.get(j), (int)(Math.random()*100), "Nowhere's vill, USA", "435-555-5555");
+					smaller[j] = new wshakespear_Person(a.get(j), (int)(Math.random()*100), "Nowhere's vill, USA", "435-555-5555");
 				}
-				Person max = smaller[a.size()-1];
+				wshakespear_Person max = smaller[a.size()-1];
 
-				List<Person> tmp = Arrays.asList(smaller);
+				List<wshakespear_Person> tmp = Arrays.asList(smaller);
 				Collections.shuffle(tmp);
 				smaller = tmp.toArray(smaller);
 
-				if(! max.toString().equals(Person.findMax(smaller).toString())) {
+				if(! max.toString().equals(wshakespear_Person.findMax(smaller).toString())) {
 					String array = "";
-					for(Person f: smaller){
+					for(wshakespear_Person f: smaller){
 						array += f.getName() + ", ";
 					}
-					throw new Exception("Error with the comparable method in Person.  Expecting findMax to return '" + max + "' not '" + Person.findMax(smaller) + "' for array with {" + array + "}");
+					throw new Exception("Error with the comparable method in Person.  Expecting findMax to return '" + max + "' not '" + wshakespear_Person.findMax(smaller) + "' for array with {" + array + "}");
 				}
 			}
 		}

@@ -1,11 +1,11 @@
 
-public class DanaLewisDataPoint {
+public class wshakespear_DanaLewisDataPoint {
 
 	private String time;
 	private int heartRate;
 	private int insulinLevel;
 
-	public DanaLewisDataPoint(String _time, int _heartRate, int _insulinLevel)
+	public wshakespear_DanaLewisDataPoint(String _time, int _heartRate, int _insulinLevel)
 	{
 		this.time = _time;
 		this.heartRate = _heartRate;
@@ -38,7 +38,7 @@ public class DanaLewisDataPoint {
 
 	public static void main(String[] args)
 	{
-		DanaLewisDataPoint dp = new DanaLewisDataPoint("01:03", 91, 109);
+		wshakespear_DanaLewisDataPoint dp = new wshakespear_DanaLewisDataPoint("01:03", 91, 109);
 		System.out.println(dp.toString());
 
 		dp.setTime("02:56");

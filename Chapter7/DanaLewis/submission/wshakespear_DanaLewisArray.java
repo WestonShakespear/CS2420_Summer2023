@@ -1,27 +1,26 @@
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.format.TextStyle;
 
-public class DanaLewisArray {
+public class wshakespear_DanaLewisArray {
 	
-	private DanaLewisDataPoint[] points;
+	private wshakespear_DanaLewisDataPoint[] points;
 	private int newIndex = 0;
 	
-	public DanaLewisArray()
+	public wshakespear_DanaLewisArray()
 	{
-		this.points = new DanaLewisDataPoint[1];
+		this.points = new wshakespear_DanaLewisDataPoint[1];
 	}
 
-	public DanaLewisArray(DanaLewisDataPoint _point)
+	public wshakespear_DanaLewisArray(wshakespear_DanaLewisDataPoint _point)
 	{
-		this.points = new DanaLewisDataPoint[1];
+		this.points = new wshakespear_DanaLewisDataPoint[1];
 		this.points[this.newIndex++] = _point;
 	}
 
-	public DanaLewisArray(DanaLewisDataPoint[] _points)
+	public wshakespear_DanaLewisArray(wshakespear_DanaLewisDataPoint[] _points)
 	{
-		this.points = new DanaLewisDataPoint[_points.length];
+		this.points = new wshakespear_DanaLewisDataPoint[_points.length];
 		for (int i = 0; i < _points.length; i++)
 		{
 			this.points[i] = _points[i];
@@ -38,7 +37,7 @@ public class DanaLewisArray {
 	}
 
 	
-	public void addDataPoint(DanaLewisDataPoint _d)
+	public void addDataPoint(wshakespear_DanaLewisDataPoint _d)
 	{
 		debug(String.format(
 			"    The current array size is %d and the newIndex is %d%n", 
@@ -60,7 +59,7 @@ public class DanaLewisArray {
 	{
 		int newSize = this.points.length * 2;
 		debug(String.format("    --Resizing array to %d--%n", newSize));
-		DanaLewisDataPoint[] newPoints = new DanaLewisDataPoint[newSize];
+		wshakespear_DanaLewisDataPoint[] newPoints = new wshakespear_DanaLewisDataPoint[newSize];
 
 		for (int i = 0; i < this.points.length; i++)
 		{
@@ -111,27 +110,27 @@ public class DanaLewisArray {
 	public static void main(String [] args) {
 
 		System.out.println("First simple tests");
-		DanaLewisArray empty = new DanaLewisArray();
+		wshakespear_DanaLewisArray empty = new wshakespear_DanaLewisArray();
 		System.out.println(empty.toString());
 
-		DanaLewisDataPoint dp = new DanaLewisDataPoint("01:03", 91, 109);
-		DanaLewisArray single = new DanaLewisArray(dp);
+		wshakespear_DanaLewisDataPoint dp = new wshakespear_DanaLewisDataPoint("01:03", 91, 109);
+		wshakespear_DanaLewisArray single = new wshakespear_DanaLewisArray(dp);
 		System.out.println(single.toString());
 
 
-		DanaLewisDataPoint[] d = {
-			new DanaLewisDataPoint("01:03", 91, 109),
-			new DanaLewisDataPoint("01:08", 100, 10),
-			new DanaLewisDataPoint("01:09", 97, 101)};
+		wshakespear_DanaLewisDataPoint[] d = {
+			new wshakespear_DanaLewisDataPoint("01:03", 91, 109),
+			new wshakespear_DanaLewisDataPoint("01:08", 100, 10),
+			new wshakespear_DanaLewisDataPoint("01:09", 97, 101)};
 
-		DanaLewisArray multi = new DanaLewisArray(d);
+		wshakespear_DanaLewisArray multi = new wshakespear_DanaLewisArray(d);
 		System.out.println(multi.toString());
 
 
 		System.out.println("Now to test the small file");
 
 
-		DanaLewisArray smallFile  = new DanaLewisArray();
+		wshakespear_DanaLewisArray smallFile  = new wshakespear_DanaLewisArray();
 		String[] dataPoints = getDataPoints("0010Points.txt");
 
 		if (dataPoints != null)
@@ -145,7 +144,7 @@ public class DanaLewisArray {
 
 
 				smallFile.addDataPoint( 
-					new DanaLewisDataPoint(
+					new wshakespear_DanaLewisDataPoint(
 						data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2])));
 
 
@@ -159,7 +158,7 @@ public class DanaLewisArray {
 		System.out.println("Now to test the large file");
 
 
-		DanaLewisArray largeFile  = new DanaLewisArray();
+		wshakespear_DanaLewisArray largeFile  = new wshakespear_DanaLewisArray();
 		dataPoints = getDataPoints("unknownPoints.txt");
 
 		if (dataPoints != null)
@@ -173,7 +172,7 @@ public class DanaLewisArray {
 
 
 				largeFile.addDataPoint( 
-					new DanaLewisDataPoint(
+					new wshakespear_DanaLewisDataPoint(
 						data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2])));
 
 

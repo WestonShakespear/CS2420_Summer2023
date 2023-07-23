@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Assignment_07
+public class wshakespear_Assignment_07
 {
 	
 	public static int Ackerman(int m, int n)

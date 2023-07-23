@@ -6,26 +6,22 @@
     "configurations": [
         {
             "type": "java",
-            "name": "DanaLewisTesting",
+            "name": "Assignment_07_Tester",
             "request": "launch",
-            "mainClass": "DanaLewisTesting",
+            "mainClass": "Assignment_07_Tester",
             "console": "externalTerminal"
         },
         {
             "type": "java",
-            "name": "DanaLewisDataPoint",
+            "name": "Assignment_07",
             "request": "launch",
-            "mainClass": "DanaLewisDataPoint",
-            "console": "externalTerminal"
-        },
-        {
-            "type": "java",
-            "name": "DanaLewisArray",
-            "request": "launch",
-            "mainClass": "DanaLewisArray",
+            "mainClass": "Assignment_07",
             "console": "externalTerminal"
         },
         
+
+      
+
         
     ]
 }

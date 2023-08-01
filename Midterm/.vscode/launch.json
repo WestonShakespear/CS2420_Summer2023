@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Questions",
+            "request": "launch",
+            "mainClass": "Questions",
+            "console": "externalTerminal"
+        },
+
+
+        {
+            "type": "java",
+            "name": "SeaTurtleTester",
+            "request": "launch",
+            "mainClass": "SeaTurtleTester",
+            "console": "externalTerminal"
+        },
+
+        {
+            "type": "java",
+            "name": "SeaTurtle",
+            "request": "launch",
+            "mainClass": "SeaTurtle",
+            "console": "externalTerminal"
+        },
+
+
+        
+
+        
+        
+        
+
+      
+
+        
+    ]
+}

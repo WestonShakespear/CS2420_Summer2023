@@ -18,19 +18,19 @@
  * Array-based implementation of the stack.
  * @author Mark Allen Weiss
  */
-public class ArrayStack<AnyType> implements Stack<AnyType>
+public class wshakespear_ArrayStack<AnyType> implements wshakespear_Stack<AnyType>
 {
     /**
      * Construct the stack.
      */
-    public ArrayStack( )
+    public wshakespear_ArrayStack( )
     {
         theArray = (AnyType []) new Object[ DEFAULT_CAPACITY ];
 
         topOfStack = -1;
     }
 
-    public ArrayStack( int capacity )
+    public wshakespear_ArrayStack( int capacity )
     {
         theArray = (AnyType []) new Object[capacity];
 
@@ -58,23 +58,23 @@ public class ArrayStack<AnyType> implements Stack<AnyType>
      * Get the most recently inserted item in the stack.
      * Does not alter the stack.
      * @return the most recently inserted item in the stack.
-     * @throws UnderflowException if the stack is empty.
+     * @throws wshakespear_UnderflowException if the stack is empty.
      */
     public AnyType top( )
     {
         if( isEmpty( ) )
-            throw new UnderflowException( "ArrayStack top" );
+            throw new wshakespear_UnderflowException( "ArrayStack top" );
         return theArray[ topOfStack ];
     }
 
     /**
      * Remove the most recently inserted item from the stack.
-     * @throws UnderflowException if the stack is empty.
+     * @throws wshakespear_UnderflowException if the stack is empty.
      */
     public void pop( )
     {
         if( isEmpty( ) )
-            throw new UnderflowException( "ArrayStack pop" );
+            throw new wshakespear_UnderflowException( "ArrayStack pop" );
         topOfStack--;
     }
 
@@ -87,7 +87,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType>
     public AnyType topAndPop( )
     {
         if( isEmpty( ) )
-            throw new UnderflowException( "ArrayStack topAndPop" );
+            throw new wshakespear_UnderflowException( "ArrayStack topAndPop" );
         return theArray[ topOfStack-- ];
     }
 

@@ -127,9 +127,11 @@ public class SeaTurtle {
 			}
 
 			turtles[i - 1] = new SeaTurtle(name, eggs);
+			
 			// System.out.printf("My name is %s: A: %d B: %d C: %d%n", name, eggs[0], eggs[1], eggs[2]);
 		}
-	
+		turtles[0].setNumEggs(2021, 10);
+
 		printTotalEggs(turtles);
 	}
 

@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class Assignment_18 {
+public class wshakespear_Assignment_18 {
 
 	//18.9 a
 	public static <AnyType> int numberOfLeaves(BinaryTree<AnyType> _t)

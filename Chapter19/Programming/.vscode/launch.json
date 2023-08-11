@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Assignment_19_Tester",
+            "request": "launch",
+            "mainClass": "Assignment_19_Tester",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Assignment_19",
+            "request": "launch",
+            "mainClass": "Assignment_19",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "BinarySearchTree",
+            "console": "externalTerminal"
+        },
+       
+    ]
+}
